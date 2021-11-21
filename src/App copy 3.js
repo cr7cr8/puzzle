@@ -22,6 +22,10 @@ Array.prototype.swap = function (x, y) {
 }
 
 
+const arr = ["a", "b", "c", "d"]
+arr.swap(1, 2)
+//alert(arr)
+
 function App() {
 
 
@@ -42,7 +46,7 @@ function App() {
   const [isFullW, setIsFullW] = useState(false)
   const [isFullH, setIsFullH] = useState(true)
 
-  const src = "https://picsum.photos/700/900"
+  const src = "https://picsum.photos/532/887"
   const url = "url(" + src + ")"
 
 
@@ -127,7 +131,7 @@ function App() {
 
   return (
     <>
-      <img src={src} style={{ position: "absolute", zIndex: -100, opacity: 0, transform:"scale(0)" }}
+      <img src={src} style={{ position: "absolute", zIndex: -100, opacity: 0 }}
         ref={imageRef}
         onLoad={function (e) {
 
@@ -163,7 +167,7 @@ function App() {
             setImgH(h)
             setIsFullW(false)
             setIsFullH(true)
-          
+            //     alert("T")
           }
           else {
             setOriW(imgWidth)
@@ -194,7 +198,11 @@ function App() {
           backgroundColor: "pink",
           width: imgH === 0 ? "inherit" : isFullW ? "inherit" : imgW + "px",
           height: imgH === 0 ? "100vh" : isFullH ? "100vh" : imgH + "px",
-      
+          //   backgroundImage: url,
+          //  backgroundImage: "url(https://picsum.photos/232/386)",
+          //  backgroundRepeat: "no-repeat",
+          // backgroundSize: "cover",
+          //  backgroundSize: "60px 120px",
           backgroundSize: imgW + "px " + imgH + "px",
           display: "grid",
           gridTemplateColumns: "1fr 1fr 1fr",
@@ -214,7 +222,7 @@ function App() {
             backgroundPosition: `0px 0px`,
 
             transform: `translateX(${shiftX1}) translateY(${shiftY1})`,
-            transition: "transform 150ms"
+            transition: "transform 300ms"
 
           }}
           onClick={function () {
@@ -244,6 +252,7 @@ function App() {
             }
 
           }}
+
         />
 
         <div style={{
@@ -254,7 +263,7 @@ function App() {
           backgroundPosition: `-${(isFullW ? divWidth : imgW) / 3}px 0px`,
 
           transform: `translateX(${shiftX2}) translateY(${shiftY2})`,
-          transition: "transform 150ms"
+          transition: "transform 300ms"
 
         }}
 
@@ -286,6 +295,7 @@ function App() {
             }
 
           }}
+
         />
 
 
@@ -297,7 +307,7 @@ function App() {
           backgroundPosition: `-${(isFullW ? divWidth : imgW) / 3 * 2}px 0px`,
 
           transform: `translateX(${shiftX3}) translateY(${shiftY3})`,
-          transition: "transform 150ms"
+          transition: "transform 300ms"
 
         }}
 
@@ -329,6 +339,9 @@ function App() {
             }
 
           }}
+
+
+
         />
 
 
@@ -342,7 +355,7 @@ function App() {
           backgroundPosition: `0% -${(isFullH ? divHeight : imgH) / 3}px`,
 
           transform: `translateX(${shiftX4}) translateY(${shiftY4})`,
-          transition: "transform 150ms"
+          transition: "transform 300ms"
         }}
 
           onClick={function () {
@@ -372,6 +385,8 @@ function App() {
             
             }
           }}
+
+
         />
 
 
@@ -382,13 +397,15 @@ function App() {
           backgroundPosition: `-${(isFullW ? divWidth : imgW) / 3}px  -${(isFullH ? divHeight : imgH) / 3}px`,
           opacity: 0,
           transform: `translateX(${shiftX5}) translateY(${shiftY5})`,
-          transition: "transform 150ms"
+          transition: "transform 300ms"
         }}
 
           onClick={function () {
             //   setShiftX5("100%")
          //   alert(matrix.current.indexOf("E"))
           }}
+
+
         />
 
 
@@ -399,7 +416,7 @@ function App() {
           backgroundPosition: `-${(isFullW ? divWidth : imgW) / 3 * 2}px  -${(isFullH ? divHeight : imgH) / 3}px`,
 
           transform: `translateX(${shiftX6}) translateY(${shiftY6})`,
-          transition: "transform 150ms"
+          transition: "transform 300ms"
         }}
 
           onClick={function () {
@@ -429,6 +446,8 @@ function App() {
             
             }
           }}
+
+
         />
 
 
@@ -439,7 +458,7 @@ function App() {
           backgroundPosition: `0%  -${(isFullH ? divHeight : imgH) / 3 * 2}px`,
 
           transform: `translateX(${shiftX7}) translateY(${shiftY7})`,
-          transition: "transform 150ms"
+          transition: "transform 300ms"
         }}
 
           onClick={function () {
@@ -474,6 +493,7 @@ function App() {
 
 
           }}
+
         />
 
 
@@ -484,7 +504,7 @@ function App() {
           backgroundPosition: `-${(isFullW ? divWidth : imgW) / 3}px  -${(isFullH ? divHeight : imgH) / 3 * 2}px`,
 
           transform: `translateX(${shiftX8}) translateY(${shiftY8})`,
-          transition: "transform 150ms"
+          transition: "transform 300ms"
         }}
 
           onClick={function () {
@@ -513,6 +533,7 @@ function App() {
               }
             }
           }}
+
         />
 
 
@@ -523,7 +544,7 @@ function App() {
           backgroundPosition: `-${(isFullW ? divWidth : imgW) / 3 * 2}px  -${(isFullH ? divHeight : imgH) / 3 * 2}px`,
 
           transform: `translateX(${shiftX9}) translateY(${shiftY9})`,
-          transition: "transform 150ms"
+          transition: "transform 300ms"
         }}
 
           onClick={function () {
@@ -556,9 +577,21 @@ function App() {
 
             
           }}
+
         />
 
+
+
+
+
+
+
+
+
       </Container>
+
+
+
 
     </>
 
