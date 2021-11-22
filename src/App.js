@@ -41,8 +41,8 @@ function App() {
   const [isFullH, setIsFullH] = useState(true)
 
   // "/image.jpg" 
-  const src = "/mt.png"
-  // const src = "https://picsum.photos/200/300"
+  //const src = "/mt.png"
+   const src = "https://picsum.photos/200/300"
   const url = "url(" + src + ")"
 
   const [shiftXArr, setShiftXArr] = useState(["0%", "0%", "0%", "0%", "0%", "0%", "0%", "0%", "0%"])
