@@ -7,13 +7,13 @@ import reportWebVitals from './reportWebVitals';
 import ContextProvider from "./ContextProvider"
 
 ReactDOM.render(
-  <React.StrictMode>
+   <React.StrictMode>
 
     <ContextProvider>
       <App />
-    </ContextProvider>
+    </ContextProvider>,
 
-  </React.StrictMode>,
+   </React.StrictMode>,
   document.getElementById('root')
 );
 
