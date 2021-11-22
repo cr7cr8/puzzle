@@ -487,6 +487,9 @@ function App() {
           transition: "transform 150ms"
         }}
 
+
+
+
           onClick={function () {
             const arr = findE()
             if (arr.includes(matrix.current.indexOf("H"))) {
